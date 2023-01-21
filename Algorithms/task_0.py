@@ -5,8 +5,8 @@ def task_1():
     number_list_map_object = list(map(int, numbers_list))
     min_number = min(number_list_map_object)
 
-    print(min_number)
-    print(number_list_map_object.index(min_number))
+    print(f"Минимальное число: {min_number}")
+    print(f"Индекс числа: {number_list_map_object.index(min_number)}")
     
  
 task_1()
@@ -23,7 +23,7 @@ def task_2():
         else:
             empty_numbers_list_negative.append(i)
             
-    print(empty_numbers_list)
-    print(empty_numbers_list_negative)
+    print(f"Положительные числа: {empty_numbers_list}")
+    print(f"Отрицательные числа: {empty_numbers_list_negative}")
     
 task_2()

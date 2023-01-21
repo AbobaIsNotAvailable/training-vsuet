@@ -12,11 +12,7 @@ def task_block_a(x, n):
         x += 1
         task_block_a(x, n)
     
-   
-    
-print(task_block_a(x, n))
-
-
+task_block_a(x, n)
 
 def task_block_b():
     num = list(input("Введите натуральное число: "))
