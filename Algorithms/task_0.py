@@ -1,8 +1,10 @@
 def task_1():
     numbers_list = input("Ввод через чисел через пробел: ")
     numbers_list = numbers_list.split(" ")
+
     number_list_map_object = list(map(int, numbers_list))
     min_number = min(number_list_map_object)
+
     print(min_number)
     print(number_list_map_object.index(min_number))
     
@@ -21,7 +23,7 @@ def task_2():
         else:
             empty_numbers_list_negative.append(i)
             
-    print(empty_numbers_list_negative)
     print(empty_numbers_list)
+    print(empty_numbers_list_negative)
     
 task_2()
