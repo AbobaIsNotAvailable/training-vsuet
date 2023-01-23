@@ -1,4 +1,19 @@
+import json
+
+
+def read_from_file():
+
+    with open("GrebenshikovPavel_ZIT-2022_vivod.json", encoding="utf-8", mode="r+") as rf:
+        data = json.load(rf)
+        return data
+
 def matrix_is_magic(matrix):
+
+    if matrix is None:
+        return
+
+    print(type(matrix))
+
     n = sum(matrix[0])
  
     for i in range(len(matrix)):
@@ -9,17 +24,13 @@ def matrix_is_magic(matrix):
             return False
     return True
  
- 
-mat = [[4, 3, 3],
-        [3, 4, 3],
-        [3, 3, 4]]
-        
-print(matrix_is_magic(mat))
-
-
+matrix_is_magic(read_from_file())
 
 
 def per_matix(mat):
+
+    # print(mat)
+
     mat_first = mat[0]
     mat_last = mat[::-1][0]
 
@@ -29,12 +40,7 @@ def per_matix(mat):
     mat.insert(0, mat_last)
     mat.append(mat_first)
 
-    print(mat)
-    
+    with open("GrebenshikovPavel_ZIT-2022_vvod.json", encoding="utf-8", mode="w+") as fw:
+        json.dump(mat, fw)
 
-matrix = [[1, 2, 3, 4],
-[5, 6, 7, 8],
-[9,10,11,12],
-[5, 6, 7, 8]]
-
-per_matix(matrix)
+per_matix(read_from_file())
